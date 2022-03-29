@@ -14,15 +14,21 @@ struct CalendarDisplayView: UIViewRepresentable {
     @Binding var selectedEventID: String?
     @Binding var todayPressed: Bool
     
+    private var isWidget: Bool
     private var events: [Event]
     private var calendar: CalendarView
     var selectDate: Date?
     
-    init(events: [Event], type: CalendarType, selectedEventID: Binding<String?>, frame: CGRect, todayPressed: Binding<Bool>) {
+    init(events: [Event], type: CalendarType, selectedEventID: Binding<String?>, frame: CGRect, todayPressed: Binding<Bool>, isWidget: Bool) {
         self.events = events
         self._todayPressed = todayPressed
         self._selectedEventID = selectedEventID
-        self.calendar = CalendarView(frame: frame, style: TumCalendarStyle.getStyle(type: type))
+        if isWidget {
+            self.calendar = CalendarView(frame: frame, style: TumCalendarWidgetStyle.getStyle(type: CalendarType.day))
+        } else {
+            self.calendar = CalendarView(frame: frame, style: TumCalendarStyle.getStyle(type: CalendarType.day))
+        }
+        self.isWidget = isWidget
     }
         
     func makeUIView(context: UIViewRepresentableContext<CalendarDisplayView>) -> CalendarView {

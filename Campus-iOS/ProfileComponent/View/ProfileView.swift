@@ -59,6 +59,13 @@ struct ProfileView: View {
                     ) {
                         Label("Movies", systemImage: "film")
                     }
+                    
+                    NavigationLink(destination: WidgetView()
+                                    .navigationBarTitle(Text("Widgets"))
+                                    .navigationBarTitleDisplayMode(.large)
+                    ) {
+                        Label("Widgets", systemImage: "lanyardcard")
+                    }
                 }
                 
                 Section() {
