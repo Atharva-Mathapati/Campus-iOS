@@ -34,19 +34,19 @@ struct CalendarContentView: View {
                         events: self.viewModel.events.map({ $0.kvkEvent }),
                         type: .week,
                         selectedEventID: self.$selectedEventID,
-                        frame: Self.getSafeAreaFrame(geometry: geo), todayPressed: self.$isTodayPressed)
+                        frame: Self.getSafeAreaFrame(geometry: geo), todayPressed: self.$isTodayPressed, isWidget: false)
                 case .day:
                     CalendarDisplayView(
                         events: self.viewModel.events.map({ $0.kvkEvent }),
                         type: .day,
                         selectedEventID: self.$selectedEventID,
-                        frame: Self.getSafeAreaFrame(geometry: geo), todayPressed: self.$isTodayPressed)
+                        frame: Self.getSafeAreaFrame(geometry: geo), todayPressed: self.$isTodayPressed, isWidget: false)
                 case .month:
                     CalendarDisplayView(
                         events: self.viewModel.events.map({ $0.kvkEvent }),
                         type: .month,
                         selectedEventID: self.$selectedEventID,
-                        frame: Self.getSafeAreaFrame(geometry: geo), todayPressed: self.$isTodayPressed)
+                        frame: Self.getSafeAreaFrame(geometry: geo), todayPressed: self.$isTodayPressed, isWidget: false)
                 default:
                     EmptyView()
                 }
