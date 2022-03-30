@@ -158,6 +158,7 @@
 		36FF90722773BFC300F4C785 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 36FF90712773BFC300F4C785 /* FirebaseAnalytics */; };
 		36FF90742773BFC300F4C785 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 36FF90732773BFC300F4C785 /* FirebaseAnalyticsSwift-Beta */; };
 		36FF90762773BFC300F4C785 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 36FF90752773BFC300F4C785 /* FirebaseCrashlytics */; };
+		4115B1EC27F48BC3002106E5 /* NewsWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4115B1EB27F48BC3002106E5 /* NewsWidgetView.swift */; };
 		41D55D6E27A2EFB200DE7155 /* LRUCache in Frameworks */ = {isa = PBXBuildFile; productRef = 41D55D6D27A2EFB200DE7155 /* LRUCache */; };
 		41DD753B27F2FE100033B3CE /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DD753A27F2FE100033B3CE /* WidgetView.swift */; };
 		41DD754627F308140033B3CE /* CalendarWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DD754527F308140033B3CE /* CalendarWidgetView.swift */; };
@@ -336,6 +337,7 @@
 		36FAE364277472EF00628799 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		36FF90642773BB8100F4C785 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		36FF906E2773BE8100F4C785 /* AuthenticationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationHandler.swift; sourceTree = "<group>"; };
+		4115B1EB27F48BC3002106E5 /* NewsWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWidgetView.swift; sourceTree = "<group>"; };
 		41DD753A27F2FE100033B3CE /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		41DD754527F308140033B3CE /* CalendarWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidgetView.swift; sourceTree = "<group>"; };
 		41DD754A27F3216B0033B3CE /* TumCalendarWidgetStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumCalendarWidgetStyle.swift; sourceTree = "<group>"; };
@@ -1118,6 +1120,7 @@
 			children = (
 				41DD753A27F2FE100033B3CE /* WidgetView.swift */,
 				41DD754527F308140033B3CE /* CalendarWidgetView.swift */,
+				4115B1EB27F48BC3002106E5 /* NewsWidgetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1387,6 +1390,7 @@
 				36AF61D827A2FD7800FEBD98 /* EntityImporter.swift in Sources */,
 				36AF61EA27A2FD7800FEBD98 /* Environment+Error.swift in Sources */,
 				36AF61ED27A2FD7800FEBD98 /* FailedView.swift in Sources */,
+				4115B1EC27F48BC3002106E5 /* NewsWidgetView.swift in Sources */,
 				36108BBE27A3046B007DC62D /* LecturesService.swift in Sources */,
 				36108BF027A304B6007DC62D /* PanelContent.swift in Sources */,
 				36AF61F127A2FD7800FEBD98 /* XMLSerializer.swift in Sources */,
