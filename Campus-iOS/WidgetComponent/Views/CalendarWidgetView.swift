@@ -46,7 +46,7 @@ struct CalendarWidgetView: View {
                     todayPressed: self.$isTodayPressed,
                     isWidget: true)
                 .accessibilityRespondsToUserInteraction(true)
-                .cornerRadius(20)
+                .cornerRadius(15)
             }
         }
     }
