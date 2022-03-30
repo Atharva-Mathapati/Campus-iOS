@@ -45,6 +45,7 @@ struct NewsView: View {
                     }.modifier(ScrollableCardsViewModifier())
                 }
             }
+            .shadow(color: Color.black.opacity(0.2), radius: 7, x: 0, y: 2)
         }
     }
 }
