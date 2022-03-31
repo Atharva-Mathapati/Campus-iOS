@@ -159,6 +159,7 @@
 		36FF90742773BFC300F4C785 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 36FF90732773BFC300F4C785 /* FirebaseAnalyticsSwift-Beta */; };
 		36FF90762773BFC300F4C785 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 36FF90752773BFC300F4C785 /* FirebaseCrashlytics */; };
 		4115B1EC27F48BC3002106E5 /* NewsWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4115B1EB27F48BC3002106E5 /* NewsWidgetView.swift */; };
+		4140A50027F5AA1300806400 /* MapWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4140A4FF27F5AA1300806400 /* MapWidgetView.swift */; };
 		41D55D6E27A2EFB200DE7155 /* LRUCache in Frameworks */ = {isa = PBXBuildFile; productRef = 41D55D6D27A2EFB200DE7155 /* LRUCache */; };
 		41DD753B27F2FE100033B3CE /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DD753A27F2FE100033B3CE /* WidgetView.swift */; };
 		41DD754627F308140033B3CE /* CalendarWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DD754527F308140033B3CE /* CalendarWidgetView.swift */; };
@@ -340,6 +341,7 @@
 		36FF90642773BB8100F4C785 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		36FF906E2773BE8100F4C785 /* AuthenticationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationHandler.swift; sourceTree = "<group>"; };
 		4115B1EB27F48BC3002106E5 /* NewsWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWidgetView.swift; sourceTree = "<group>"; };
+		4140A4FF27F5AA1300806400 /* MapWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWidgetView.swift; sourceTree = "<group>"; };
 		41DD753A27F2FE100033B3CE /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		41DD754527F308140033B3CE /* CalendarWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidgetView.swift; sourceTree = "<group>"; };
 		41DD754A27F3216B0033B3CE /* TumCalendarWidgetStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumCalendarWidgetStyle.swift; sourceTree = "<group>"; };
@@ -1107,18 +1109,9 @@
 		41DD753927F2FD410033B3CE /* WidgetComponent */ = {
 			isa = PBXGroup;
 			children = (
-				41DD753C27F2FE870033B3CE /* ViewModel */,
 				41DD753D27F2FE8F0033B3CE /* Views */,
-				41DD753E27F2FE970033B3CE /* Enums */,
 			);
 			path = WidgetComponent;
-			sourceTree = "<group>";
-		};
-		41DD753C27F2FE870033B3CE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		41DD753D27F2FE8F0033B3CE /* Views */ = {
@@ -1127,15 +1120,9 @@
 				41DD753A27F2FE100033B3CE /* WidgetView.swift */,
 				41DD754527F308140033B3CE /* CalendarWidgetView.swift */,
 				4115B1EB27F48BC3002106E5 /* NewsWidgetView.swift */,
+				4140A4FF27F5AA1300806400 /* MapWidgetView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		41DD753E27F2FE970033B3CE /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1401,6 +1388,7 @@
 				4115B1EC27F48BC3002106E5 /* NewsWidgetView.swift in Sources */,
 				36108BBE27A3046B007DC62D /* LecturesService.swift in Sources */,
 				36108BF027A304B6007DC62D /* PanelContent.swift in Sources */,
+				4140A50027F5AA1300806400 /* MapWidgetView.swift in Sources */,
 				36AF61F127A2FD7800FEBD98 /* XMLSerializer.swift in Sources */,
 				36108C1A27A307FA007DC62D /* Modus.swift in Sources */,
 				36108BC127A3046B007DC62D /* LectureView.swift in Sources */,
