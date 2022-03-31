@@ -48,6 +48,32 @@ struct WidgetView: View {
                                 EmptyView()
                             })
                 .onTapGesture { switch2News.toggle() }
+                //Map Widget
+                ZStack {
+                    Rectangle()
+                        .cornerRadius(10)
+                        .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.2), radius: 10.0)
+                        .foregroundColor(Color(.systemGray6))
+                        .frame(width: 175, height: 175, alignment: .trailing)
+                    MapWidgetView(zoomOnUser: true,
+                                  panelPosition: "down",
+                                  canteens: [],
+                                  selectedCanteenName: " ",
+                                  selectedAnnotationIndex: 0)
+                    .cornerRadius(10)
+                    .frame(width: 175, height: 175, alignment: .center)
+                    .disabled(true)
+                }
+                .background(NavigationLink(destination: MapView(zoomOnUser: true,
+                                                                panelPosition: "down",
+                                                                canteens: [],
+                                                                selectedCanteenName: " ",
+                                                                selectedAnnotationIndex: 0,
+                                                                selectedCanteen: Cafeteria(location: Location(latitude: 0, longitude: 0, address: " "), name: " ", id: " ", queueStatusApi: nil))
+                                           , isActive: $switch2Map) {
+                                EmptyView()
+                            })
+                .onTapGesture { switch2Map.toggle() }
             }
         }
     }
