@@ -9,10 +9,12 @@ import SwiftUI
 
 struct WidgetView: View {
     @ObservedObject var viewModel = NewsViewModel()
+    @StateObject var model: Model = Model()
 
     @State private var switch2Calendar = false
     @State private var switch2News = false
     @State private var switch2Map = false
+    @State private var switch2Grades = false
     
     var body: some View {
         VStack {
@@ -22,9 +24,9 @@ struct WidgetView: View {
                     .cornerRadius(15)
                     .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.2), radius: 10.0)
                     .foregroundColor(.white)
-                    .frame(width: UIScreen.main.bounds.width - 40, height: 200, alignment: .center)
+                    .frame(width: UIScreen.main.bounds.width - 35, height: 200, alignment: .center)
                 CalendarWidgetView()
-                    .frame(width: UIScreen.main.bounds.width - 40, height: 200, alignment: .center)
+                    .frame(width: UIScreen.main.bounds.width - 35, height: 200, alignment: .center)
                     .disabled(true)
                 }
             .background(NavigationLink(destination: CalendarContentView(), isActive: $switch2Calendar) {
@@ -75,6 +77,22 @@ struct WidgetView: View {
                             })
                 .onTapGesture { switch2Map.toggle() }
             }
+            
+            //News Widget
+            ZStack {
+                Rectangle()
+                    .cornerRadius(15)
+                    .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.2), radius: 10.0)
+                    .foregroundColor(.white)
+                    .frame(width: UIScreen.main.bounds.width - 35, height: 100, alignment: .center)
+                GradeWidgetView()
+                    .frame(width: UIScreen.main.bounds.width - 35, height: 100, alignment: .center)
+                    .disabled(true)
+            }
+            .background(NavigationLink(destination: GradesScreen(model: model), isActive: $switch2Grades) {
+                            EmptyView()
+                        })
+            .onTapGesture { switch2Grades.toggle() }
         }
     }
 }
