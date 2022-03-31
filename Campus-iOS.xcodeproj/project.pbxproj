@@ -159,6 +159,7 @@
 		36FF90742773BFC300F4C785 /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 36FF90732773BFC300F4C785 /* FirebaseAnalyticsSwift-Beta */; };
 		36FF90762773BFC300F4C785 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 36FF90752773BFC300F4C785 /* FirebaseCrashlytics */; };
 		4115B1EC27F48BC3002106E5 /* NewsWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4115B1EB27F48BC3002106E5 /* NewsWidgetView.swift */; };
+		4130B95227F5C73A001A8847 /* GradeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4130B95127F5C73A001A8847 /* GradeWidgetView.swift */; };
 		4140A50027F5AA1300806400 /* MapWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4140A4FF27F5AA1300806400 /* MapWidgetView.swift */; };
 		41D55D6E27A2EFB200DE7155 /* LRUCache in Frameworks */ = {isa = PBXBuildFile; productRef = 41D55D6D27A2EFB200DE7155 /* LRUCache */; };
 		41DD753B27F2FE100033B3CE /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DD753A27F2FE100033B3CE /* WidgetView.swift */; };
@@ -341,6 +342,7 @@
 		36FF90642773BB8100F4C785 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		36FF906E2773BE8100F4C785 /* AuthenticationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationHandler.swift; sourceTree = "<group>"; };
 		4115B1EB27F48BC3002106E5 /* NewsWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWidgetView.swift; sourceTree = "<group>"; };
+		4130B95127F5C73A001A8847 /* GradeWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeWidgetView.swift; sourceTree = "<group>"; };
 		4140A4FF27F5AA1300806400 /* MapWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWidgetView.swift; sourceTree = "<group>"; };
 		41DD753A27F2FE100033B3CE /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		41DD754527F308140033B3CE /* CalendarWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidgetView.swift; sourceTree = "<group>"; };
@@ -1121,6 +1123,7 @@
 				41DD754527F308140033B3CE /* CalendarWidgetView.swift */,
 				4115B1EB27F48BC3002106E5 /* NewsWidgetView.swift */,
 				4140A4FF27F5AA1300806400 /* MapWidgetView.swift */,
+				4130B95127F5C73A001A8847 /* GradeWidgetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1382,6 +1385,7 @@
 				36108BFE27A30517007DC62D /* MovieDetailCellView.swift in Sources */,
 				36108BE527A304B5007DC62D /* MealPlanView.swift in Sources */,
 				36AF61EF27A2FD7800FEBD98 /* LoadingView.swift in Sources */,
+				4130B95227F5C73A001A8847 /* GradeWidgetView.swift in Sources */,
 				36AF61D827A2FD7800FEBD98 /* EntityImporter.swift in Sources */,
 				36AF61EA27A2FD7800FEBD98 /* Environment+Error.swift in Sources */,
 				36AF61ED27A2FD7800FEBD98 /* FailedView.swift in Sources */,
