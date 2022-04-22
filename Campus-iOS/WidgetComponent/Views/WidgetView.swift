@@ -15,6 +15,7 @@ struct WidgetView: View {
     @State private var switch2News = false
     @State private var switch2Map = false
     @State private var switch2Grades = false
+    @State private var switch2Movies = false
     
     var body: some View {
         VStack {
@@ -24,9 +25,9 @@ struct WidgetView: View {
                     .cornerRadius(15)
                     .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.2), radius: 10.0)
                     .foregroundColor(.white)
-                    .frame(width: UIScreen.main.bounds.width - 35, height: 200, alignment: .center)
+                    .frame(width: UIScreen.main.bounds.width - 35, height: 175, alignment: .center)
                 CalendarWidgetView()
-                    .frame(width: UIScreen.main.bounds.width - 35, height: 200, alignment: .center)
+                    .frame(width: UIScreen.main.bounds.width - 35, height: 175, alignment: .center)
                     .disabled(true)
                 }
             .background(NavigationLink(destination: CalendarContentView(), isActive: $switch2Calendar) {
@@ -78,21 +79,40 @@ struct WidgetView: View {
                 .onTapGesture { switch2Map.toggle() }
             }
             
-            //News Widget
+            //Grade Widget
             ZStack {
                 Rectangle()
                     .cornerRadius(15)
                     .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.2), radius: 10.0)
                     .foregroundColor(.white)
                     .frame(width: UIScreen.main.bounds.width - 35, height: 100, alignment: .center)
-                GradeWidgetView()
-                    .frame(width: UIScreen.main.bounds.width - 35, height: 100, alignment: .center)
-                    .disabled(true)
+                HStack {
+                    Spacer().frame(width: 20, height: 0)
+                    GradeWidgetView()
+                        .frame(width: UIScreen.main.bounds.width - 35, height: 100, alignment: .center)
+                        .disabled(true)
+                }
             }
             .background(NavigationLink(destination: GradesScreen(model: model), isActive: $switch2Grades) {
                             EmptyView()
                         })
             .onTapGesture { switch2Grades.toggle() }
+            
+            //Movie Widget
+            ZStack {
+                Rectangle()
+                    .cornerRadius(10)
+                    .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.2), radius: 10.0)
+                    .foregroundColor(Color(.systemGray6))
+                    .frame(width: 175, height: 175, alignment: .leading)
+                NewsWidgetView()
+                    .frame(width: 175, height: 175, alignment: .center)
+                    .disabled(true)
+            }
+            .background(NavigationLink(destination: NewsView(), isActive: $switch2News) {
+                            EmptyView()
+                        })
+            .onTapGesture { switch2News.toggle() }
         }
     }
 }

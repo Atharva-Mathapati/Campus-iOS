@@ -13,7 +13,7 @@ struct GradeWidgetView: View {
     )
     
     var body: some View {
-        Text("abc")
+        GradeView(grade: Grade.dummyData.first!)
     }
         
     func getLatestGrade() -> [(String, [Grade])] {

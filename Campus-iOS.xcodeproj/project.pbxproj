@@ -161,6 +161,7 @@
 		4115B1EC27F48BC3002106E5 /* NewsWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4115B1EB27F48BC3002106E5 /* NewsWidgetView.swift */; };
 		4130B95227F5C73A001A8847 /* GradeWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4130B95127F5C73A001A8847 /* GradeWidgetView.swift */; };
 		4140A50027F5AA1300806400 /* MapWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4140A4FF27F5AA1300806400 /* MapWidgetView.swift */; };
+		4199197C2809BE2E00B0272E /* MovieWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4199197B2809BE2E00B0272E /* MovieWidgetView.swift */; };
 		41D55D6E27A2EFB200DE7155 /* LRUCache in Frameworks */ = {isa = PBXBuildFile; productRef = 41D55D6D27A2EFB200DE7155 /* LRUCache */; };
 		41DD753B27F2FE100033B3CE /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DD753A27F2FE100033B3CE /* WidgetView.swift */; };
 		41DD754627F308140033B3CE /* CalendarWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DD754527F308140033B3CE /* CalendarWidgetView.swift */; };
@@ -342,6 +343,7 @@
 		4115B1EB27F48BC3002106E5 /* NewsWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWidgetView.swift; sourceTree = "<group>"; };
 		4130B95127F5C73A001A8847 /* GradeWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeWidgetView.swift; sourceTree = "<group>"; };
 		4140A4FF27F5AA1300806400 /* MapWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWidgetView.swift; sourceTree = "<group>"; };
+		4199197B2809BE2E00B0272E /* MovieWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWidgetView.swift; sourceTree = "<group>"; };
 		41DD753A27F2FE100033B3CE /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		41DD754527F308140033B3CE /* CalendarWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidgetView.swift; sourceTree = "<group>"; };
 		41DD754A27F3216B0033B3CE /* TumCalendarWidgetStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumCalendarWidgetStyle.swift; sourceTree = "<group>"; };
@@ -1118,6 +1120,7 @@
 				4115B1EB27F48BC3002106E5 /* NewsWidgetView.swift */,
 				4140A4FF27F5AA1300806400 /* MapWidgetView.swift */,
 				4130B95127F5C73A001A8847 /* GradeWidgetView.swift */,
+				4199197B2809BE2E00B0272E /* MovieWidgetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1398,6 +1401,7 @@
 				36BB6F6C27AFD2B900F224AB /* Room.swift in Sources */,
 				36AF61EB27A2FD7800FEBD98 /* ErrorCategory.swift in Sources */,
 				36203E8C2761C6EC00C24658 /* LoginView.swift in Sources */,
+				4199197C2809BE2E00B0272E /* MovieWidgetView.swift in Sources */,
 				41DD754B27F3216B0033B3CE /* TumCalendarWidgetStyle.swift in Sources */,
 				36E964A7277498540055777F /* CalendarContentView.swift in Sources */,
 				36AF61E327A2FD7800FEBD98 /* APIConstants.swift in Sources */,
