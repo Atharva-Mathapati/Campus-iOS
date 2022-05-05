@@ -93,8 +93,13 @@ struct CampusApp: App {
             }
             
             NavigationView {
-                Text("Dummy StudyRooms View")
-                // StudyRoomsView(model: model)
+                StudyRoomsView()
+                    .navigationTitle("Study Rooms")
+                    .toolbar {
+                        ToolbarItemGroup(placement: .navigationBarTrailing) {
+                            ProfileToolbar(model: model)
+                        }
+                    }
             }
             .tag(4)
             .tabItem {
