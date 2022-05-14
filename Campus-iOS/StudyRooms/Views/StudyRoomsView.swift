@@ -23,7 +23,7 @@ struct StudyRoomsView: View {
                     NavigationLink(
                         destination:
                             StudyRoomGroupView(selectedGroup: group, rooms: groupRooms)
-                                .navigationBarTitle(group.name ?? "")
+                                .navigationTitle(group.name ?? "")
                                 .navigationBarTitleDisplayMode(.inline)
                     ) {
                         VStack(alignment: .leading, spacing: 8) {
@@ -43,7 +43,6 @@ struct StudyRoomsView: View {
                                         .foregroundColor(Color("tumBlue"))
                                     Text(details)
                                         .font(.system(size: 12))
-                                    
                                 }
                             }
                             .frame(minWidth: 0, maxWidth: .infinity)

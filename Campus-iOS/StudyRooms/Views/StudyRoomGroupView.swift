@@ -12,46 +12,50 @@ struct StudyRoomGroupView: View {
     @State var rooms: [StudyRoom]?
     
     var body: some View {
-        List {
-            ForEach(self.rooms ?? [StudyRoom](), id: \.id) { room in
-                VStack {
-                    NavigationLink(
-                        destination:
-                            StudyRoomDetailsView(room: room)
-                                .navigationBarTitleDisplayMode(.inline)
-                    ) {
-                        HStack {
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text(room.name ?? "")
-                                    .fontWeight(.bold)
-                                HStack {
-                                    Image(systemName: "barcode.viewfinder")
-                                        .frame(width: 12, height: 12)
-                                        .foregroundColor(Color("tumBlue"))
-                                    Text(room.code ?? "")
-                                        .font(.system(size: 12))
-                                    Spacer()
+        VStack {
+            List {
+                StudyRoomGroupMapView()
+                Spacer()
+                ForEach(self.rooms ?? [StudyRoom](), id: \.id) { room in
+                    VStack {
+                        NavigationLink(
+                            destination:
+                                StudyRoomDetailsView(room: room)
+                                    .navigationBarTitleDisplayMode(.inline)
+                        ) {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text(room.name ?? "")
+                                        .fontWeight(.bold)
+                                    HStack {
+                                        Image(systemName: "barcode.viewfinder")
+                                            .frame(width: 12, height: 12)
+                                            .foregroundColor(Color("tumBlue"))
+                                        Text(room.code ?? "")
+                                            .font(.system(size: 12))
+                                        Spacer()
+                                    }
+                                    .frame(minWidth: 0, maxWidth: .infinity)
+                                    .foregroundColor(.init(.darkGray))
+                                    .padding()
                                 }
-                                .frame(minWidth: 0, maxWidth: .infinity)
-                                .foregroundColor(.init(.darkGray))
-                                .padding()
+                                .padding(.leading, 4)
+                                
+                                Spacer()
+                                
+                                room.localizedStatus
                             }
-                            .padding(.leading, 4)
-                            
-                            Spacer()
-                            
-                            room.localizedStatus
                         }
                     }
-                }
-                .listRowInsets(
-                    EdgeInsets(
-                        top: 4,
-                        leading: 18,
-                        bottom: 2,
-                        trailing: 18
+                    .listRowInsets(
+                        EdgeInsets(
+                            top: 4,
+                            leading: 18,
+                            bottom: 2,
+                            trailing: 18
+                        )
                     )
-                )
+                }
             }
         }
     }

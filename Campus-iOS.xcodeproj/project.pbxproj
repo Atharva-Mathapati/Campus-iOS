@@ -72,6 +72,7 @@
 		36203E8C2761C6EC00C24658 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36203E892761C6EC00C24658 /* LoginView.swift */; };
 		36203E8D2761C6EC00C24658 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36203E8A2761C6EC00C24658 /* Credentials.swift */; };
 		3621CACC282FA0A3009813CB /* StudyRoomDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3621CACB282FA0A3009813CB /* StudyRoomDetailsView.swift */; };
+		3621CACE282FCE1E009813CB /* StudyRoomGroupMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3621CACD282FCE1E009813CB /* StudyRoomGroupMapView.swift */; };
 		3629BA2C27A1CECA0036AC80 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3629BA2B27A1CECA0036AC80 /* NewsView.swift */; };
 		3629BA2E27A1CEFA0036AC80 /* NewsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3629BA2D27A1CEFA0036AC80 /* NewsCard.swift */; };
 		3629BA3127A1D0AD0036AC80 /* ScrollableCardsViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3629BA3027A1D0AD0036AC80 /* ScrollableCardsViewModifier.swift */; };
@@ -260,6 +261,7 @@
 		36203E892761C6EC00C24658 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		36203E8A2761C6EC00C24658 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		3621CACB282FA0A3009813CB /* StudyRoomDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomDetailsView.swift; sourceTree = "<group>"; };
+		3621CACD282FCE1E009813CB /* StudyRoomGroupMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomGroupMapView.swift; sourceTree = "<group>"; };
 		3629BA2B27A1CECA0036AC80 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		3629BA2D27A1CEFA0036AC80 /* NewsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCard.swift; sourceTree = "<group>"; };
 		3629BA3027A1D0AD0036AC80 /* ScrollableCardsViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableCardsViewModifier.swift; sourceTree = "<group>"; };
@@ -809,6 +811,7 @@
 				36A112212824314B00CA47D0 /* StudyRoomsView.swift */,
 				36A11231282461E900CA47D0 /* StudyRoomGroupView.swift */,
 				3621CACB282FA0A3009813CB /* StudyRoomDetailsView.swift */,
+				3621CACD282FCE1E009813CB /* StudyRoomGroupMapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1424,6 +1427,7 @@
 				36A1122C2824428600CA47D0 /* StudyRoom.swift in Sources */,
 				36BB6F7B27B27D0D00F224AB /* TuitionCard.swift in Sources */,
 				36AF61E227A2FD7800FEBD98 /* Constants.swift in Sources */,
+				3621CACE282FCE1E009813CB /* StudyRoomGroupMapView.swift in Sources */,
 				36BB6F6C27AFD2B900F224AB /* Room.swift in Sources */,
 				36AF61EB27A2FD7800FEBD98 /* ErrorCategory.swift in Sources */,
 				36203E8C2761C6EC00C24658 /* LoginView.swift in Sources */,
