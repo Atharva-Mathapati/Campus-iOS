@@ -22,6 +22,11 @@ struct StudyRoomGroup: Entity {
         case rooms = "raeume"
     }
     
+    init() {
+        self.id = 0
+        self.sorting = 0
+    }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         

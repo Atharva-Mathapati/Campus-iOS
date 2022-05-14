@@ -137,3 +137,9 @@
 "Server error" = "Server Fehler";
 "The accessed data is missing" = "Die zugegriffenen Daten sind nicht vorhanden";
 "Decoding of data failed" = "Dekodierung der Daten fehlgeschlagen";
+"Choose Speaker" = "Sprecher auswählen";
+
+// StudyRoom
+"Free" = "Frei";
+"Occupied until" = "Besetzt bis";
+"Unknown" = "Unbekannt";

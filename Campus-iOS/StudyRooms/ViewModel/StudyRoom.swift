@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct StudyRoom: Entity {
     var buildingCode: String?
@@ -24,6 +25,23 @@ struct StudyRoom: Entity {
     var res_nr: Int64
     var status: String?
     var attributes: [StudyRoomAttribute]?
+    
+    var localizedStatus: Text {
+        switch self.status {
+        case "frei":
+            return Text("Free")
+                .foregroundColor(.green)
+        case "belegt":
+            if let occupiedUntilString = self.occupiedUntil, let occupiedUntilDate = StudyRoom.dateFomatter.date(from: occupiedUntilString) {
+                return Text("\("Occupied until".localized) \(StudyRoom.secondDateFormatter.string(from: occupiedUntilDate))")
+                    .foregroundColor(.red)
+            }
+        default:
+            return Text("Unknown")
+                .foregroundColor(.gray)
+        }
+        return Text("")
+    }
 
     enum CodingKeys: String, CodingKey {
         case occupiedFrom = "belegung_ab"
@@ -42,6 +60,14 @@ struct StudyRoom: Entity {
         case res_nr = "res_nr"
         case status = "status"
         case attributes = "attribute"
+    }
+    
+    init() {
+        self.buildingNumber = 0
+        self.id = 0
+        self.occupiedFor = 0
+        self.occupiedIn = 0
+        self.res_nr = 0
     }
     
     init(from decoder: Decoder) throws {
@@ -81,4 +107,18 @@ struct StudyRoom: Entity {
         self.status = status
         self.attributes = attributes
     }
+    
+    private static let dateFomatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.locale = Locale.current
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return formatter
+    }()
+
+    private static let secondDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.locale = Locale.current
+        formatter.dateFormat = "HH:mm"
+        return formatter
+    }()
 }

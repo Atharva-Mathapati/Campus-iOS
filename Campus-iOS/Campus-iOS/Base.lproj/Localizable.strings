@@ -142,3 +142,8 @@
 "Server error" = "Server error";
 "The accessed data is missing" = "The accessed data is missing";
 "Decoding of data failed" = "Decoding of data failed";
+
+// StudyRoom
+"Free" = "Free";
+"Occupied until" = "Occupied until";
+"Unknown" = "Unknown";

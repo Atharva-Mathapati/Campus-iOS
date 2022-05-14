@@ -71,6 +71,7 @@
 		36203E8B2761C6EC00C24658 /* TUMSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36203E882761C6EC00C24658 /* TUMSplashScreen.swift */; };
 		36203E8C2761C6EC00C24658 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36203E892761C6EC00C24658 /* LoginView.swift */; };
 		36203E8D2761C6EC00C24658 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36203E8A2761C6EC00C24658 /* Credentials.swift */; };
+		3621CACC282FA0A3009813CB /* StudyRoomDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3621CACB282FA0A3009813CB /* StudyRoomDetailsView.swift */; };
 		3629BA2C27A1CECA0036AC80 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3629BA2B27A1CECA0036AC80 /* NewsView.swift */; };
 		3629BA2E27A1CEFA0036AC80 /* NewsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3629BA2D27A1CEFA0036AC80 /* NewsCard.swift */; };
 		3629BA3127A1D0AD0036AC80 /* ScrollableCardsViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3629BA3027A1D0AD0036AC80 /* ScrollableCardsViewModifier.swift */; };
@@ -96,6 +97,7 @@
 		36A1122C2824428600CA47D0 /* StudyRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1122B2824428600CA47D0 /* StudyRoom.swift */; };
 		36A1122E2824436C00CA47D0 /* StudyRoomAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1122D2824436C00CA47D0 /* StudyRoomAttribute.swift */; };
 		36A1123028244E0700CA47D0 /* StudyRoomApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1122F28244E0700CA47D0 /* StudyRoomApiResponse.swift */; };
+		36A11232282461E900CA47D0 /* StudyRoomGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A11231282461E900CA47D0 /* StudyRoomGroupView.swift */; };
 		36AD5CF227B7FEAD00DAE143 /* TumCalendarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD5CF127B7FEAD00DAE143 /* TumCalendarStyle.swift */; };
 		36AD5CF427B8C83500DAE143 /* CalendarSingleEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD5CF327B8C83500DAE143 /* CalendarSingleEventView.swift */; };
 		36AD5CF627B8D97500DAE143 /* LectureDetailsEventInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD5CF527B8D97500DAE143 /* LectureDetailsEventInfoView.swift */; };
@@ -257,6 +259,7 @@
 		36203E882761C6EC00C24658 /* TUMSplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TUMSplashScreen.swift; sourceTree = "<group>"; };
 		36203E892761C6EC00C24658 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		36203E8A2761C6EC00C24658 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		3621CACB282FA0A3009813CB /* StudyRoomDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomDetailsView.swift; sourceTree = "<group>"; };
 		3629BA2B27A1CECA0036AC80 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		3629BA2D27A1CEFA0036AC80 /* NewsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCard.swift; sourceTree = "<group>"; };
 		3629BA3027A1D0AD0036AC80 /* ScrollableCardsViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableCardsViewModifier.swift; sourceTree = "<group>"; };
@@ -285,6 +288,7 @@
 		36A1122B2824428600CA47D0 /* StudyRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoom.swift; sourceTree = "<group>"; };
 		36A1122D2824436C00CA47D0 /* StudyRoomAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomAttribute.swift; sourceTree = "<group>"; };
 		36A1122F28244E0700CA47D0 /* StudyRoomApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomApiResponse.swift; sourceTree = "<group>"; };
+		36A11231282461E900CA47D0 /* StudyRoomGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomGroupView.swift; sourceTree = "<group>"; };
 		36AD5CF127B7FEAD00DAE143 /* TumCalendarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumCalendarStyle.swift; sourceTree = "<group>"; };
 		36AD5CF327B8C83500DAE143 /* CalendarSingleEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSingleEventView.swift; sourceTree = "<group>"; };
 		36AD5CF527B8D97500DAE143 /* LectureDetailsEventInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureDetailsEventInfoView.swift; sourceTree = "<group>"; };
@@ -803,6 +807,8 @@
 			isa = PBXGroup;
 			children = (
 				36A112212824314B00CA47D0 /* StudyRoomsView.swift */,
+				36A11231282461E900CA47D0 /* StudyRoomGroupView.swift */,
+				3621CACB282FA0A3009813CB /* StudyRoomDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1347,8 +1353,10 @@
 				36108C1927A307FA007DC62D /* Grade.swift in Sources */,
 				36108BBA27A3046B007DC62D /* LectureDetailsScreen.swift in Sources */,
 				36203E8D2761C6EC00C24658 /* Credentials.swift in Sources */,
+				3621CACC282FA0A3009813CB /* StudyRoomDetailsView.swift in Sources */,
 				3698CBED2761E014001C5735 /* CustomRoundedBorderTextFieldStyle.swift in Sources */,
 				36108BE627A304B5007DC62D /* MealPlanViewModel.swift in Sources */,
+				36A11232282461E900CA47D0 /* StudyRoomGroupView.swift in Sources */,
 				36203E8B2761C6EC00C24658 /* TUMSplashScreen.swift in Sources */,
 				36AF61DA27A2FD7800FEBD98 /* EatAPI.swift in Sources */,
 				36108BEF27A304B6007DC62D /* MapContent.swift in Sources */,
