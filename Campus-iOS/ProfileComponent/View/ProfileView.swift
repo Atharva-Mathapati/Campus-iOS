@@ -42,7 +42,10 @@ struct ProfileView: View {
                         Label("TUM.sexy", systemImage: "heart")
                     }
                     
-                    NavigationLink(destination: Text("Roomfinder")) {
+                    NavigationLink(
+                        destination: RoomFinderView(model: self.model)
+                            .navigationBarTitle(Text("Roomfinder")).navigationBarTitleDisplayMode(.large)
+                    ) {
                         Label("Roomfinder", systemImage: "rectangle.portrait.arrowtriangle.2.inward")
                     }
                     

@@ -99,6 +99,10 @@
 		36A1122E2824436C00CA47D0 /* StudyRoomAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1122D2824436C00CA47D0 /* StudyRoomAttribute.swift */; };
 		36A1123028244E0700CA47D0 /* StudyRoomApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1122F28244E0700CA47D0 /* StudyRoomApiResponse.swift */; };
 		36A11232282461E900CA47D0 /* StudyRoomGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A11231282461E900CA47D0 /* StudyRoomGroupView.swift */; };
+		36A74DEC2833F1E30002DB3F /* FoundRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A74DEB2833F1E30002DB3F /* FoundRoom.swift */; };
+		36A74DEE2833F3180002DB3F /* RoomFinderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A74DED2833F3180002DB3F /* RoomFinderViewModel.swift */; };
+		36A74DF02833F4420002DB3F /* RoomFinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A74DEF2833F4420002DB3F /* RoomFinderView.swift */; };
+		36A74DF22833F4D50002DB3F /* RoomFinderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A74DF12833F4D50002DB3F /* RoomFinderListView.swift */; };
 		36AD5CF227B7FEAD00DAE143 /* TumCalendarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD5CF127B7FEAD00DAE143 /* TumCalendarStyle.swift */; };
 		36AD5CF427B8C83500DAE143 /* CalendarSingleEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD5CF327B8C83500DAE143 /* CalendarSingleEventView.swift */; };
 		36AD5CF627B8D97500DAE143 /* LectureDetailsEventInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AD5CF527B8D97500DAE143 /* LectureDetailsEventInfoView.swift */; };
@@ -291,6 +295,10 @@
 		36A1122D2824436C00CA47D0 /* StudyRoomAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomAttribute.swift; sourceTree = "<group>"; };
 		36A1122F28244E0700CA47D0 /* StudyRoomApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomApiResponse.swift; sourceTree = "<group>"; };
 		36A11231282461E900CA47D0 /* StudyRoomGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomGroupView.swift; sourceTree = "<group>"; };
+		36A74DEB2833F1E30002DB3F /* FoundRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundRoom.swift; sourceTree = "<group>"; };
+		36A74DED2833F3180002DB3F /* RoomFinderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomFinderViewModel.swift; sourceTree = "<group>"; };
+		36A74DEF2833F4420002DB3F /* RoomFinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomFinderView.swift; sourceTree = "<group>"; };
+		36A74DF12833F4D50002DB3F /* RoomFinderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomFinderListView.swift; sourceTree = "<group>"; };
 		36AD5CF127B7FEAD00DAE143 /* TumCalendarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumCalendarStyle.swift; sourceTree = "<group>"; };
 		36AD5CF327B8C83500DAE143 /* CalendarSingleEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSingleEventView.swift; sourceTree = "<group>"; };
 		36AD5CF527B8D97500DAE143 /* LectureDetailsEventInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureDetailsEventInfoView.swift; sourceTree = "<group>"; };
@@ -720,6 +728,7 @@
 		366F0E8227580CFB0091651D /* Campus-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				36A74DE72833F1890002DB3F /* RoomFinder */,
 				36A1121F2824312100CA47D0 /* StudyRooms */,
 				36BB6F8027B39B2200F224AB /* LectureSearchComponent */,
 				36BB6F7627B26DCA00F224AB /* TuitionComponent */,
@@ -826,6 +835,41 @@
 				36A1122F28244E0700CA47D0 /* StudyRoomApiResponse.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		36A74DE72833F1890002DB3F /* RoomFinder */ = {
+			isa = PBXGroup;
+			children = (
+				36A74DEA2833F1CA0002DB3F /* Entity */,
+				36A74DE92833F19E0002DB3F /* ViewModel */,
+				36A74DE82833F1950002DB3F /* Views */,
+			);
+			path = RoomFinder;
+			sourceTree = "<group>";
+		};
+		36A74DE82833F1950002DB3F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36A74DEF2833F4420002DB3F /* RoomFinderView.swift */,
+				36A74DF12833F4D50002DB3F /* RoomFinderListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		36A74DE92833F19E0002DB3F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				36A74DED2833F3180002DB3F /* RoomFinderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		36A74DEA2833F1CA0002DB3F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				36A74DEB2833F1E30002DB3F /* FoundRoom.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		36AF61B727A2FD7700FEBD98 /* Base */ = {
@@ -1326,6 +1370,7 @@
 				36108C1D27A307FA007DC62D /* GradeView.swift in Sources */,
 				36AF61DE27A2FD7800FEBD98 /* APIResponse.swift in Sources */,
 				36BB6F7027B1197400F224AB /* Profile.swift in Sources */,
+				36A74DEE2833F3180002DB3F /* RoomFinderViewModel.swift in Sources */,
 				36E964A32774932B0055777F /* CalendarToolbar.swift in Sources */,
 				36108BC427A3046B007DC62D /* LectureDetailsDetailedInfoRowView.swift in Sources */,
 				36108C1C27A307FA007DC62D /* GradesView.swift in Sources */,
@@ -1339,9 +1384,11 @@
 				36AF61DF27A2FD7800FEBD98 /* TUMOnlineAPI.swift in Sources */,
 				36BB6F7D27B356C200F224AB /* PersonDetailedCellView.swift in Sources */,
 				36108BE727A304B5007DC62D /* MenuViewModel.swift in Sources */,
+				36A74DF22833F4D50002DB3F /* RoomFinderListView.swift in Sources */,
 				36AF61E127A2FD7800FEBD98 /* TUMCabeAPI.swift in Sources */,
 				36108BB627A3046B007DC62D /* LectureDetailsViewModel+State.swift in Sources */,
 				36108BBF27A3046B007DC62D /* LectureDetailsService.swift in Sources */,
+				36A74DEC2833F1E30002DB3F /* FoundRoom.swift in Sources */,
 				36982BD827A2739000515847 /* Collapsible.swift in Sources */,
 				36AD5CFA27B9711B00DAE143 /* LectureSearchListView.swift in Sources */,
 				36108BFF27A30517007DC62D /* MoviesView.swift in Sources */,
@@ -1417,6 +1464,7 @@
 				256D0D4327D77A9C00F5EC38 /* MapViewModel.swift in Sources */,
 				36AF61F127A2FD7800FEBD98 /* XMLSerializer.swift in Sources */,
 				36108C1A27A307FA007DC62D /* Modus.swift in Sources */,
+				36A74DF02833F4420002DB3F /* RoomFinderView.swift in Sources */,
 				36108BC127A3046B007DC62D /* LectureView.swift in Sources */,
 				366F0E9027580CFD0091651D /* Campus_iOS.xcdatamodeld in Sources */,
 				36108BFC27A30517007DC62D /* MovieCard.swift in Sources */,
