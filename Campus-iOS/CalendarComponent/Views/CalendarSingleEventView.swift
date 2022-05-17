@@ -59,9 +59,9 @@ struct CalendarSingleEventView_Previews: PreviewProvider {
     static var event = CalendarEvent(id: 0, title: "Test Event")
     static var viewModel = LectureDetailsViewModel(
                                             model: MockModel(),
-                                            serivce: LectureDetailsService(),
+                                            service: LectureDetailsService(),
                                             // Yes, it is a really hacky solution...
-                                            lecture: Lecture(id: UInt64("1") ?? 0, lvNumber: UInt64("1") ?? 0, title: "", duration: "", stp_sp_sst: "", eventType: "", eventTypeTag: "", semesterYear: "", semesterType: "", semester: "", semesterID: "", organisationNumber: 0, organisation: "", organisationTag: "", speaker: "")
+                                            lecture: Lecture(id: UInt64("1") ?? 0, lvNumber: UInt64("1") ?? 0, title: "", duration: "", stp_sp_sst: "", eventTypeDefault: "", eventTypeTag: "", semesterYear: "", semesterType: "", semester: "", semesterID: "", organisationNumber: 0, organisation: "", organisationTag: "", speaker: "")
                                         )
     
     static var previews: some View {

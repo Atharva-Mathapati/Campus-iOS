@@ -58,9 +58,9 @@ struct CalendarContentView: View {
             CalendarSingleEventView(
                 viewModel: LectureDetailsViewModel(
                                             model: model,
-                                            serivce: LectureDetailsService(),
+                                            service: LectureDetailsService(),
                                             // Yes, it is a really hacky solution...
-                                            lecture: Lecture(id: UInt64(chosenEvent?.lvNr ?? "") ?? 0, lvNumber: UInt64(chosenEvent?.lvNr ?? "") ?? 0, title: "", duration: "", stp_sp_sst: "", eventType: "", eventTypeTag: "", semesterYear: "", semesterType: "", semester: "", semesterID: "", organisationNumber: 0, organisation: "", organisationTag: "", speaker: "")
+                                            lecture: Lecture(id: UInt64(chosenEvent?.lvNr ?? "") ?? 0, lvNumber: UInt64(chosenEvent?.lvNr ?? "") ?? 0, title: "", duration: "", stp_sp_sst: "", eventTypeDefault: "", eventTypeTag: "", semesterYear: "", semesterType: "", semester: "", semesterID: "", organisationNumber: 0, organisation: "", organisationTag: "", speaker: "")
                                         ),
                 event: chosenEvent
             )
