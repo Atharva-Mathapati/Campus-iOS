@@ -25,7 +25,7 @@ struct Collapsible<Content: View>: View {
                     HStack {
                         self.title()
                         Spacer()
-                        Image(systemName: self.collapsed ? "chevron.down" : "chevron.right")
+                        Image(systemName: self.collapsed ? "chevron.right" : "chevron.down")
                     }
                     .padding()
                     .background(Color.white.opacity(0.01))

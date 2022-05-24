@@ -56,6 +56,23 @@ struct PanelContent: View {
                 HStack {
                     Spacer()
                     
+                    Button (action: {
+                        zoomOnUser = true
+                        if panelPosition == "up" {
+                            panelPosition = "pushMid"
+                        }
+                    }) {
+                        Image(systemName: "location")
+                            .font(.title2)
+                    }
+                    
+                    Spacer()
+                    
+                    PanelSearchBar(panelPosition: $panelPosition,
+                              lockPanel: $lockPanel,
+                              searchString: $searchString)
+                    Spacer()
+                    
                     Menu(content: {
                         Button(action: {
                             self.mode = .cafeterias
@@ -76,24 +93,6 @@ struct PanelContent: View {
                             Image(systemName: "book.fill")
                         }
                     }
-                    
-                    Spacer()
-                    
-                    Button (action: {
-                        zoomOnUser = true
-                        if panelPosition == "up" {
-                            panelPosition = "pushMid"
-                        }
-                    }) {
-                        Image(systemName: "location")
-                            .font(.title2)
-                    }
-                    
-                    Spacer()
-                    
-                    PanelSearchBar(panelPosition: $panelPosition,
-                              lockPanel: $lockPanel,
-                              searchString: $searchString)
                     
                     Spacer().frame(width: 0.25 * UIScreen.main.bounds.width/10,
                                    height: 1.5 * UIScreen.main.bounds.width/10)
