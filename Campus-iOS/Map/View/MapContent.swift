@@ -191,9 +191,15 @@ struct MapContent: UIViewRepresentable {
             }
             
             if let title = view.annotation?.title {
-                for canteen in control.canteens{
-                    if title! == canteen.title {
+                for canteen in control.canteens {
+                    if title == canteen.title {
                         control.selectedCanteen = canteen
+                        control.panelPosition = "pushMid"
+                    }
+                }
+                for group in control.studyRoomsResponse.groups ?? [StudyRoomGroup]() {
+                    if title == group.name {
+                        control.selectedGroup = group
                         control.panelPosition = "pushMid"
                     }
                 }
