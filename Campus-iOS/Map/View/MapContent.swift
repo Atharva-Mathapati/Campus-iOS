@@ -26,12 +26,14 @@ struct MapContent: UIViewRepresentable {
     @Binding var panelPosition: String
     @Binding var canteens: [Cafeteria]
     @Binding var selectedCanteen: Cafeteria?
+    @Binding var studyRoomsResponse: StudyRoomApiRespose
+    @Binding var selectedGroup: StudyRoomGroup?
+    @Binding var mode: MapMode
+    @Binding var setAnnotations: Bool
     
     @State private var focusedCanteen: Cafeteria?
-    @State private var setAnnotations: Bool = true
-        
-    let endpoint = EatAPI.canteens
-    let sessionManager = Session.defaultSession
+    @State private var focusedGroup: StudyRoomGroup?
+    
     var locationManager = CLLocationManager()
     public let mapView = MKMapView()
     
@@ -48,15 +50,37 @@ struct MapContent: UIViewRepresentable {
         return mapView
     }
     
+    func removeAnnotationsButUser(_ view: MKMapView) {
+        let userLocation = view.userLocation
+        view.removeAnnotations(view.annotations)
+        view.addAnnotation(userLocation)
+    }
+    
     func updateUIView(_ view: MKMapView, context: Context) {
         focusOnUser(mapView: view)
-        focusOnCanteen(mapView: view)
-        
-        if canteens.count > 0 && setAnnotations {
-            DispatchQueue.main.async {
-                let annotations = canteens.map { Annotation(title: $0.name, coordinate: $0.coordinate) }
-                view.addAnnotations(annotations)
-                setAnnotations = false // only add canteen annotations once
+        switch mode {
+        case .cafeterias:
+            focusOnCanteen(mapView: view)
+            if canteens.count > 0, setAnnotations {
+                DispatchQueue.main.async {
+                    let annotations = canteens.map { Annotation(title: $0.name, coordinate: $0.coordinate) }
+                    removeAnnotationsButUser(view)
+                    view.addAnnotations(annotations)
+                    setAnnotations = false
+                }
+            }
+        case .studyRooms:
+            focusOnStudyGroup(mapView: view)
+            
+            if let groups = studyRoomsResponse.groups, groups.count > 0, setAnnotations {
+                DispatchQueue.main.async {
+                    let annotations = groups.map {
+                        Annotation(title: $0.name, coordinate: $0.coordinate ?? CLLocationCoordinate2D(latitude: 48.149691364160894, longitude: 11.567925766109836))
+                    }
+                    removeAnnotationsButUser(view)
+                    view.addAnnotations(annotations)
+                    setAnnotations = false
+                }
             }
         }
         
@@ -112,6 +136,27 @@ struct MapContent: UIViewRepresentable {
                         mapView.setRegion(region, animated: true)
                         mapView.selectAnnotation(i, animated: true)
                         focusedCanteen = selectedCanteen // only focus once, when newly selected
+                    }
+                }
+            }
+        }
+    }
+    
+    func focusOnStudyGroup(mapView: MKMapView) {
+        if selectedGroup != nil && selectedGroup != focusedGroup, let group = selectedGroup {
+            for i in mapView.annotations {
+                if i.title == group.name {
+                    let locValue: CLLocationCoordinate2D = i.coordinate
+                    
+                    let coordinate = CLLocationCoordinate2D(
+                        latitude: locValue.latitude, longitude: locValue.longitude)
+                    let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+                    let region = MKCoordinateRegion(center: coordinate, span: span)
+                    
+                    DispatchQueue.main.async {
+                        mapView.setRegion(region, animated: true)
+                        mapView.selectAnnotation(i, animated: true)
+                        focusedGroup = selectedGroup // only focus once, when newly selected
                     }
                 }
             }

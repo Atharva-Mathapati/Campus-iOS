@@ -17,18 +17,27 @@ struct MapView: View {
                 zoomOnUser: $viewModel.zoomOnUser,
                 panelPosition: $viewModel.panelPosition,
                 canteens: $viewModel.canteens,
-                selectedCanteen: $viewModel.selectedCanteen)
+                selectedCanteen: $viewModel.selectedCanteen,
+                studyRoomsResponse: $viewModel.studyRoomsResponse,
+                selectedGroup: $viewModel.selectedRoomGroup,
+                mode: $viewModel.mode,
+                setAnnotations: $viewModel.setAnnotations)
             Panel(zoomOnUser: $viewModel.zoomOnUser,
                   panelPosition: $viewModel.panelPosition,
                   lockPanel: $viewModel.lockPanel,
                   canteens: $viewModel.canteens,
-                  selectedCanteen: $viewModel.selectedCanteen)
+                  selectedCanteen: $viewModel.selectedCanteen,
+                  studyRoomsResponse: $viewModel.studyRoomsResponse,
+                  selectedRoomGroup: $viewModel.selectedRoomGroup,
+                  mode: $viewModel.mode,
+                  setAnnotations: $viewModel.setAnnotations)
         }
         .edgesIgnoringSafeArea(.vertical)
         .navigationTitle("Map")
         .navigationBarHidden(true)
         .task {
             viewModel.fetchCanteens()
+            viewModel.fetchStudyRooms()
         }
     }
 }

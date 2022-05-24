@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct StudyRoomApiRespose: Entity {
+struct StudyRoomApiRespose: Entity, Equatable {
+    static func == (lhs: StudyRoomApiRespose, rhs: StudyRoomApiRespose) -> Bool {
+        lhs.groups?.map({$0.id}) == rhs.groups?.map({$0.id}) &&
+        lhs.rooms?.map({$0.id}) == rhs.rooms?.map({$0.id})
+    }
+    
     var rooms: [StudyRoom]?
     var groups: [StudyRoomGroup]?
     

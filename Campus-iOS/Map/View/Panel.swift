@@ -16,6 +16,10 @@ struct Panel: View {
     @Binding var lockPanel: Bool
     @Binding var canteens: [Cafeteria]
     @Binding var selectedCanteen: Cafeteria?
+    @Binding var studyRoomsResponse: StudyRoomApiRespose
+    @Binding var selectedRoomGroup: StudyRoomGroup?
+    @Binding var mode: MapMode
+    @Binding var setAnnotations: Bool
 
     let screenHeight = UIScreen.main.bounds.height
     let screenWidth = UIScreen.main.bounds.width
@@ -35,7 +39,11 @@ struct Panel: View {
                              panelPosition: $panelPosition,
                              lockPanel: $lockPanel,
                              canteens: $canteens,
-                             selectedCanteen: $selectedCanteen)
+                             selectedCanteen: $selectedCanteen,
+                             studyRoomsResponse: $studyRoomsResponse,
+                             selectedRoomGroup: $selectedRoomGroup,
+                            mode: $mode,
+                             setAnnotations: $setAnnotations)
                 
                 Spacer().frame(width: screenWidth,
                                height: screenHeight * (1 - 8.2/10))
@@ -151,6 +159,7 @@ enum DragState {
 
 struct Panel_Previews: PreviewProvider {
     @Binding var selectedCanteen: Cafeteria?
+    @State static var selectedMode: MapMode = .cafeterias
 
     static var previews: some View {
         Panel(zoomOnUser: .constant(true),
@@ -162,6 +171,9 @@ struct Panel_Previews: PreviewProvider {
                                                                       address: ""),
                                                    name: "",
                                                    id: "",
-                                                   queueStatusApi: "")))
+                                                   queueStatusApi: "")),
+              studyRoomsResponse: .constant(StudyRoomApiRespose()),
+              selectedRoomGroup: .constant(nil),
+              mode: $selectedMode, setAnnotations: .constant(true))
     }
 }

@@ -9,14 +9,23 @@ import Foundation
 import SwiftUI
 import Alamofire
 
+enum MapMode: CaseIterable {
+    case cafeterias, studyRooms
+}
+
 final class MapViewModel: ObservableObject {
     @Published var canteens: [Cafeteria] = []
+    @Published var studyRoomsResponse = StudyRoomApiRespose()
     @Published var selectedCanteen: Cafeteria?
+    @Published var selectedRoomGroup: StudyRoomGroup?
     @Published var zoomOnUser: Bool = true
     @Published var panelPosition: String = "pushMid"
     @Published var lockPanel: Bool = false
     @Published var selectedCanteenName: String = " "
     @Published var selectedAnnotationIndex: Int = 0
+    @Published var mode: MapMode = .cafeterias
+    @Published var setAnnotations = true
+    
     
     private let endpoint = EatAPI.canteens
     private let sessionManager = Session.defaultSession
@@ -34,6 +43,12 @@ final class MapViewModel: ObservableObject {
                     }
                 }
             }
+        }
+    }
+    
+    func fetchStudyRooms() {
+        sessionManager.request(TUMDevAppAPI.rooms).responseDecodable(of: StudyRoomApiRespose.self, decoder: JSONDecoder()) { [self] response in
+            self.studyRoomsResponse = response.value ?? StudyRoomApiRespose()
         }
     }
 }

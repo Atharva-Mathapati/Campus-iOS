@@ -11,18 +11,14 @@ struct StudyRoomsView: View {
     
     @ObservedObject var viewModel = StudyRoomsViewModel()
     
-    func getRoomsPerGroup(_ group: StudyRoomGroup) -> [StudyRoom]? {
-        self.viewModel.response.rooms?.filter({ group.rooms?.contains($0.id) ?? false })
-    }
-    
     var body: some View {
         List {
             ForEach(self.viewModel.response.groups ?? [StudyRoomGroup](), id: \.id) { group in
-                let groupRooms = self.getRoomsPerGroup(group)
+                let groupRooms = group.getRooms(allRooms: self.viewModel.response.rooms ?? [StudyRoom]())
                 VStack {
                     NavigationLink(
                         destination:
-                            StudyRoomGroupView(selectedGroup: group, rooms: groupRooms)
+                            StudyRoomGroupView(selectedGroup: .constant(group), rooms: groupRooms)
                                 .navigationTitle(group.name ?? "")
                                 .navigationBarTitleDisplayMode(.inline)
                     ) {
